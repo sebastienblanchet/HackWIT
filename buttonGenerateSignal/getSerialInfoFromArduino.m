@@ -1,9 +1,12 @@
+%HackWITUS
+%Sebastien Blanchet , Lilyn Gao
+%March 25 2017
 % Function to read sensor output from arduino
 
+%clear worksapce
+clear a
 % Define a rudiment
 % Define a duration of practice
-
-
 
 a = arduino('COM4','uno');
 interv = 1000;
@@ -19,6 +22,6 @@ while t<interv
     t = t+passo;
     drawnow;
 end
-fclose(a)
+
 % a.readDigitalPin(2);
 
