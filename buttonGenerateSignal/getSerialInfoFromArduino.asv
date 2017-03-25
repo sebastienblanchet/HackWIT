@@ -7,26 +7,24 @@
 clear a
 % Define a rudiment
 % Define a duration of practice
+
 a = arduino('COM4','uno');
 interv = 1000;
 passo = 1;
 t = 1;
 x = 0;
-
-%define ideal rudement
-
 %setup while loop for real time plotting
 while t<interv
     %set b as current point being read
     b = a.readDigitalPin(2);
-    %plot it with previously acquired data
+    %plot it ag
     x = [x,b];
     plot(x)
     axis([0,interv,0,1.5]);
     grid on
-    %increase time step and draw
     t = t+passo;
     drawnow;
 end
 
+% a.readDigitalPin(2);
 
