@@ -19,17 +19,17 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   val = digitalRead(ShockVal);
-  Serial.print("The sensor is ");
-  Serial.println(val);
-  
-  if (val == HIGH)
-  {
-    digitalWrite(ledPin, LOW);
-
-  }
-  else
-  {
-    digitalWrite(ledPin, HIGH);
-  }
-  delay(1000);
+//  Serial.print("The sensor is ");
+//  Serial.println(val);
+//  
+//  if (val == HIGH)
+//  {
+//    digitalWrite(ledPin, LOW);
+//
+//  }
+//  else
+//  {
+//    digitalWrite(ledPin, HIGH);
+//  }
+//  delay(1000);
 }
