@@ -1,18 +1,7 @@
-%HackWITUS
-%Sebastien Blanchet , Lilyn Gao
-%March 25 2017
-% Function to read sensor output from arduino
+a = serial('COM4')
+set(a,'BaudRate',9600)
+fopen(a)
 
-%clear worksapce
-clear 
-clc
-
-sec = 30;
-
-a = arduino('COM4','uno');
-% Define a rudiment
-% Define a duration of practice
-% estimate 30 points per second
 timeDuration = seconds(sec);
 interv = sec*30;
 
@@ -26,14 +15,13 @@ x = 0;
 while now<timeEnd
     %set b as current point being read
     % ~ inverts 1 to 0
-    b = a.readDigitalPin(2);
+    b = a.readVoltage(0);
     %plot it with previously acquired data
     x = [x,b];
     plot(x)
-    axis([0,interv,0,1.5]);
+    axis([0,interv,0,6]);
     grid on
     drawnow;
 end
 
-
-
+fclose(a)
